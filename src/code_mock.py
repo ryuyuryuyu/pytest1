@@ -11,3 +11,7 @@ def get_user_name(user_ids):
         res_json = get_json_data(id)
         user_names[id] = res_json['name']
     return user_names
+
+def user_name_validation(user_name):
+    if user_name == None:
+        raise ValueError('名前が設定されていません')
